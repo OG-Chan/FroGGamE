@@ -1,8 +1,8 @@
-"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src\spdlog.cpp"
-/FI"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.obj"
-/sourceDependencies "M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.dep.json"
-@"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src\spdlog.cpp"
+/FI"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.obj"
+/sourceDependencies "D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.dep.json"
+@"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

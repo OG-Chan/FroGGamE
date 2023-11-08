@@ -17,14 +17,14 @@ public:
 	ULevelCamera();
 
 	void TargetSetter(AActor* NewTarget, FVector NewCameraOffset);
+	UPROPERTY(EditAnywhere)
+	FVector CameraOffset = FVector(0, 1000, 300);
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere)
-	FVector CameraOffset = FVector(0, 1000, 300);
-
+	
 	AActor* Target;
 	FVector TargetLocation;
 	FVector CameraLocation;
@@ -34,5 +34,6 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+private:
+
 };
