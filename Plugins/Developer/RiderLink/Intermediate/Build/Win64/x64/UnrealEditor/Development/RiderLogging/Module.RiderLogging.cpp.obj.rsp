@@ -1,8 +1,8 @@
-"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp"
-/FI"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Definitions.h"
-/Fo"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp.obj"
-/sourceDependencies "D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp.dep.json"
-@"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\RiderLogging.Shared.rsp"
+"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp"
+/FI"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Definitions.h"
+/Fo"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp.obj"
+/sourceDependencies "M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp.dep.json"
+@"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\RiderLogging.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
