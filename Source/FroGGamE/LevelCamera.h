@@ -23,12 +23,14 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
 	
 	AActor* Target;
-	FVector TargetLocation;
-	FVector CameraLocation;
 	void FocusAt();
+
+	UPROPERTY(EditAnywhere)
+	bool bShouldFollow = true;
+	UPROPERTY(EditAnywhere)
+	bool bShouldLookAt = true;
 	
 public:	
 	// Called every frame
