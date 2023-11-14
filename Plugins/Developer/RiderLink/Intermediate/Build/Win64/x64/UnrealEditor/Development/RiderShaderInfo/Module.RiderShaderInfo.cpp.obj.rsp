@@ -1,8 +1,8 @@
-"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp"
-/FI"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Definitions.h"
-/Fo"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp.obj"
-/sourceDependencies "M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp.dep.json"
-@"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\RiderShaderInfo.Shared.rsp"
+"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp"
+/FI"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Definitions.h"
+/Fo"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp.obj"
+/sourceDependencies "D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp.dep.json"
+@"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\RiderShaderInfo.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
