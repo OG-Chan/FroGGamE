@@ -20,10 +20,10 @@ void ULevelCamera::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	
-	FocusAt();
+	FocusAt(Target);
 }
 
-void ULevelCamera::FocusAt()
+void ULevelCamera::FocusAt(AActor* Actor)
 {
 
 	FVector CurrentCameraLocation = GetOwner()->GetActorLocation();
