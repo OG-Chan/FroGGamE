@@ -1,8 +1,8 @@
-"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IProtocol.cpp"
-/FI"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\IProtocol.cpp.obj"
-/sourceDependencies "M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\IProtocol.cpp.dep.json"
-@"M:\Prv\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IProtocol.cpp"
+/FI"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\IProtocol.cpp.obj"
+/sourceDependencies "D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\IProtocol.cpp.dep.json"
+@"D:\Pracki\UE\Projects\FroGGamE\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
