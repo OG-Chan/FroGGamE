@@ -35,8 +35,8 @@ void ULevelCamera::FocusAt(AActor* Actor)
 	if (bShouldLookAt) GetOwner()->SetActorRotation(LookRotationInterp);
 }
 
-void ULevelCamera::TargetSetter(AActor* NewTarget, FVector NewCameraOffset)
+/*void ULevelCamera::TargetSetter(AActor* NewTarget, FVector NewCameraOffset)
 {
 	Target = NewTarget;
 	CameraOffset = NewCameraOffset;
-}
+}*/

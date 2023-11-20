@@ -13,7 +13,7 @@ class FROGGAME_API ULevelCamera : public UActorComponent
 public:	
 	ULevelCamera();
 
-	void TargetSetter(AActor* NewTarget, FVector NewCameraOffset);
+	//void TargetSetter(AActor* NewTarget, FVector NewCameraOffset);
 	UPROPERTY(EditAnywhere)
 	FVector CameraOffset = FVector(0, 1000, 300);
 
@@ -23,14 +23,16 @@ protected:
 	AActor* Target;
 	void FocusAt(AActor* Actor);
 
+	
+	
+public:	
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 	UPROPERTY(EditAnywhere)
 	bool bShouldFollow = true;
 	UPROPERTY(EditAnywhere)
 	bool bShouldLookAt = true;
 	
-public:	
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
 private:
 
 };
