@@ -16,7 +16,7 @@ ADoor::ADoor()
 	LeftAccess->AddLocalOffset(FVector(0, -100, 0));
 	RightAccess->AddLocalOffset(FVector(0, 100, 0));
 
-	LeftAccess->OnComponentBeginOverlap.AddDynamic(this, &ADoor::Teleport);
+	//LeftAccess->OnComponentBeginOverlap.AddDynamic(this, &ADoor::Teleport);
 	//OnActorBeginOverlap.AddDynamic(this, &ADoor::Teleport);
 }
 
