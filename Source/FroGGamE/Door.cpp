@@ -1,30 +1,25 @@
 #include "Door.h"
 
+#include "MovieSceneSequenceID.h"
 #include "Components/BoxComponent.h"
 
 ADoor::ADoor()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 	UStaticMeshComponent* DoorMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Door"));
 	RootComponent = DoorMesh;
-
-	LeftAccess = CreateDefaultSubobject<UBoxComponent>(TEXT("LeftAccess"));
-	RightAccess = CreateDefaultSubobject<UBoxComponent>(TEXT("RightAccess"));
-	LeftAccess->SetWorldScale3D(FVector (1, 0.5, 2));
-	RightAccess->SetWorldScale3D(FVector (1, 0.5, 2));
-	LeftAccess->AddLocalOffset(FVector(0, -100, 0));
-	RightAccess->AddLocalOffset(FVector(0, 100, 0));
-
-	//LeftAccess->OnComponentBeginOverlap.AddDynamic(this, &ADoor::Teleport);
-	//OnActorBeginOverlap.AddDynamic(this, &ADoor::Teleport);
+	TriggerBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Trigger Box"));
+	TriggerBox->SetupAttachment(RootComponent);
+	TriggerBox->SetWorldScale3D(FVector (1, 0.5, 2));
+	
 }
 
 void ADoor::BeginPlay()
 {
 	Super::BeginPlay();
-
-	Player = GetWorld()->GetFirstPlayerController()->GetPawn();
+	
+	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ADoor::Teleport);
 }
 
 void ADoor::Tick(float DeltaTime)
@@ -33,17 +28,32 @@ void ADoor::Tick(float DeltaTime)
 	
 }
 
-void ADoor::Teleport(AActor* OverlappedActor, AActor* OtherActor)
-{
-	OtherActor->GetActorLocation();
-	OverlappedActor->GetActorLocation();
-	//FVector Distance =
-	//setactortransform
-//if (LeftAccess && normal<0) OtherActor->AddActorLocalOffset(FVector (0, TeleportDistance, 0));
-//if (RightAccess) OtherActor->AddActorLocalOffset(FVector (0, -TeleportDistance, 0));
-}
 
-void ADoor::LockUnlock()
+void ADoor::Teleport(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if (bUnlocked)
+	{
+		FVector OtherActorLocation = OtherActor->GetActorLocation();
 	
+		if (bIsElevator == false)
+		{
+			FVector LocationDiff = GetActorLocation() - OtherActorLocation;
+			if (LocationDiff.X < 0 && bRightSideAccess)
+			{
+				OtherActor->SetActorLocation(OtherActor->GetActorLocation() + FVector(-100, 0, 0));
+			}
+			if (LocationDiff.X > 0 && bLeftSideAccess)
+			{
+				OtherActor->SetActorLocation(OtherActor->GetActorLocation() + FVector(100, 0, 0));
+			}
+		}
+		else
+		{
+			OtherActor->SetActorLocation(OtherActorLocation + FVector(0, 0, 410));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Display, TEXT("Locked"));
+	}
 }

@@ -16,10 +16,9 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-
-	AActor* Player;
-	UBoxComponent* LeftAccess;
-	UBoxComponent* RightAccess;
+	
+	UPROPERTY(EditAnywhere)
+	UBoxComponent* TriggerBox;
 
 public:	
 	virtual void Tick(float DeltaTime) override;
@@ -29,14 +28,13 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool bLeftSideAccess = true;
 	UPROPERTY(EditAnywhere)
-	bool bIsElevator;
+	bool bUnlocked = true;
 	UPROPERTY(EditAnywhere)
-	float TeleportDistance = 200;
-
-	void LockUnlock();
+	bool bIsElevator;
 
 private:
 
-	void Teleport(AActor* OverlappedActor, AActor* OtherActor);
+	UFUNCTION()
+	void Teleport(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 	
 };
