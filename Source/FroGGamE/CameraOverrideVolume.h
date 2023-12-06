@@ -18,10 +18,11 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	class UBoxComponent* TriggerVolume;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void OverrideCamera();
+	void OverrideCamera(AActor* OverlappedActor, AActor* OverlappingActor);
 };

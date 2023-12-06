@@ -27,16 +27,19 @@ void ULevelCamera::FocusAt(AActor* Actor)
 {
 
 	FVector CurrentCameraLocation = GetOwner()->GetActorLocation();
-	FVector CurrentTargetLocation = Target->GetActorLocation();
+	FVector CurrentTargetLocation = Actor->GetActorLocation();
 	FRotator LookRotation = UKismetMathLibrary::FindLookAtRotation(CurrentCameraLocation, CurrentTargetLocation);
+	FVector FollowLocation = Actor->GetActorLocation() * FVector (1, 0, 1) + CameraOffset;
+	
 	FRotator LookRotationInterp = UKismetMathLibrary::RInterpTo(GetOwner()->GetActorRotation(), LookRotation, FApp::GetDeltaTime(), 3);
+	FVector FollowLocationInterp = UKismetMathLibrary::VInterpTo(GetOwner()->GetActorLocation(), FollowLocation, FApp::GetDeltaTime(), 3);
 
-	if (bShouldFollow) GetOwner()->SetActorLocation(Target->GetActorLocation() + CameraOffset);
+	if (bShouldFollow) GetOwner()->SetActorLocation(FollowLocationInterp);
 	if (bShouldLookAt) GetOwner()->SetActorRotation(LookRotationInterp);
 }
 
-/*void ULevelCamera::TargetSetter(AActor* NewTarget, FVector NewCameraOffset)
+void ULevelCamera::SetTarget(AActor* NewTarget, FVector NewCameraOffset)
 {
 	Target = NewTarget;
 	CameraOffset = NewCameraOffset;
-}*/
+}

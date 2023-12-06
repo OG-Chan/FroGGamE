@@ -3,6 +3,7 @@
 
 #include "CameraOverrideVolume.h"
 
+#include "LevelCamera.h"
 #include "Components/BoxComponent.h"
 
 // Sets default values
@@ -11,7 +12,8 @@ ACameraOverrideVolume::ACameraOverrideVolume()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
-	UBoxComponent* TriggerVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("TriggerVolume"));
+	TriggerVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("TriggerVolume"));
+	SetRootComponent(TriggerVolume);
 }
 
 // Called when the game starts or when spawned
@@ -29,9 +31,9 @@ void ACameraOverrideVolume::Tick(float DeltaTime)
 
 }
 
-void ACameraOverrideVolume::OverrideCamera()
+void ACameraOverrideVolume::OverrideCamera(AActor* OverlappedActor, AActor* OverlappingActor)
 {
-	
+	//ULevelCamera::SetTarget(this);
 }
 
 

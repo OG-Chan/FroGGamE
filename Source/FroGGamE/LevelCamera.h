@@ -13,7 +13,7 @@ class FROGGAME_API ULevelCamera : public UActorComponent
 public:	
 	ULevelCamera();
 
-	//void TargetSetter(AActor* NewTarget, FVector NewCameraOffset);
+	void SetTarget(AActor* NewTarget, FVector NewCameraOffset = FVector(0, 1000, 300));
 	UPROPERTY(EditAnywhere)
 	FVector CameraOffset = FVector(0, 1000, 300);
 
