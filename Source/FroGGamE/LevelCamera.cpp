@@ -19,8 +19,8 @@ void ULevelCamera::BeginPlay()
 void ULevelCamera::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	
-	FocusAt(Target);
+
+	if (Target) FocusAt(Target);
 }
 
 void ULevelCamera::FocusAt(AActor* Actor)

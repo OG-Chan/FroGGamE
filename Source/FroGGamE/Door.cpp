@@ -28,7 +28,6 @@ void ADoor::Tick(float DeltaTime)
 	
 }
 
-
 void ADoor::Teleport(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	if (bUnlocked)
