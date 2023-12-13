@@ -2,8 +2,7 @@
 
 
 #include "CameraOverrideVolume.h"
-
-#include "LevelCamera.h"
+#include "LevelCameraActor.h"
 #include "Components/BoxComponent.h"
 
 // Sets default values
@@ -22,6 +21,7 @@ void ACameraOverrideVolume::BeginPlay()
 	Super::BeginPlay();
 
 	OnActorBeginOverlap.AddDynamic(this, &ACameraOverrideVolume::OverrideCamera);
+	OnActorEndOverlap.AddDynamic(this, &ACameraOverrideVolume::StopOverriding);
 }
 
 // Called every frame
@@ -33,7 +33,10 @@ void ACameraOverrideVolume::Tick(float DeltaTime)
 
 void ACameraOverrideVolume::OverrideCamera(AActor* OverlappedActor, AActor* OverlappingActor)
 {
-	//ULevelCamera::SetTarget(this);
+	//.ALevelCameraActor::SetTarget(OverlappedActor);
 }
 
-
+void ACameraOverrideVolume::StopOverriding(AActor* OverlappedActor, AActor* OverlappingActor)
+{
+	//.ALevelCameraActor::SetTarget(OverlappingActor);
+}

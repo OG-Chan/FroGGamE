@@ -24,5 +24,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION()
 	void OverrideCamera(AActor* OverlappedActor, AActor* OverlappingActor);
+
+	UFUNCTION()
+	void StopOverriding(AActor* OverlappedActor, AActor* OverlappingActor);
 };
