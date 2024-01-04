@@ -1,22 +1,16 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "LevelCameraActor.h"
 
 #include "Camera/CameraComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 
-// Sets default values
 ALevelCameraActor::ALevelCameraActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	SetRootComponent(Camera);
 }
 
-// Called when the game starts or when spawned
 void ALevelCameraActor::BeginPlay()
 {
 	Super::BeginPlay();
@@ -24,7 +18,6 @@ void ALevelCameraActor::BeginPlay()
 	Target = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
 
-// Called every frame
 void ALevelCameraActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
